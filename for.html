@@ -1,0 +1,18 @@
+<script>
+  function forInSample() {
+    let product = {
+      productID: 680,
+      name: "THis is a test",
+      calculateGrossProfit: function () {
+        return this.productID;
+      },
+    };
+    for (const key in product) {
+      console.log(product[key]);
+    }
+  }
+</script>
+<p>
+  <button onclick="forInSample();">Simple Switch Sample</button>
+  Including
+</p>
