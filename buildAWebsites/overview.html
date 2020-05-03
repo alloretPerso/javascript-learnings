@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Welcome to this demo</title>
+    <meta name="author" content="Alexandre Lloret" />
+    <meta name="description" content="a simple practis" />
+    <link rel="icon" type="image/png" href="./Assets/m6/favicon.png" />
+    <style>
+      body {
+        margin-top: 0px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: antiquewhite;
+        background-image: url("./Assets/m6/images/pattern.png");
+      }
+      #mainHeader {
+        background-color: blueviolet;
+      }
+      nav {
+        height: 60px;
+        width: 1000px;
+        margin: 0 auto 20px;
+      }
+      #left-menu {
+        float: left;
+        width: 30%;
+        margin-bottom: 20px;
+      }
+      .searchbox {
+        padding: 5px;
+        margin: 10 px 10 px;
+        width: 200px;
+      }
+      #main {
+        float: right;
+        width: 70%;
+        margin-bottom: 20px;
+      }
+      footer {
+        clear: both;
+        width: 100%;
+      }
+
+      header,
+      section,
+      footer,
+      aside,
+      nav,
+      figure {
+        display: block;
+      }
+      table,
+      td,
+      th {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="mainHeader">
+      <nav>
+        <img src="./Assets/m6/images/cake.svg" height="55px" />
+      </nav>
+    </header>
+    <div style="width: 1000px; margin-left: auto; margin-right: auto;">
+      <aside id="left-menu">
+        <img src="./Assets/m6/images/bethanylogo.png" />
+        <header>
+          <h4 style="text-align: center;">Browse</h4>
+        </header>
+        <input type="search" class="searchbox" placeholder="Search " />
+      </aside>
+      <main id="main">
+        <table>
+          <thead>
+            <th>Image</th>
+            <th>Pie name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Details</th>
+          </thead>
+          <tr>
+            <td>
+              <img
+                src="./Assets/m6/images/products/cheesecakesmall.jpg"
+                width="100"
+              />
+            </td>
+            <td>Cheese cake</td>
+            <td>Plain cheese cake. Plain pleasure</td>
+            <td>$12.95</td>
+            <td>View details</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="./Assets/m6/images/products/applepiesmall.jpg"
+                width="100"
+              />
+            </td>
+            <td>Apple pie</td>
+            <td>Plain apple cake. Plain pleasure</td>
+            <td>$14.95</td>
+            <td>View details</td>
+          </tr>
+        </table>
+      </main>
+      <footer>
+        <small>2020 training for front</small>
+      </footer>
+    </div>
+  </body>
+</html>
