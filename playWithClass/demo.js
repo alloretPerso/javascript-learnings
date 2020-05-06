@@ -1,46 +1,34 @@
 "use strict";
 (function () {
-  //To create a constructor
-
-  function Person(firstName, lastName, age) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age;
-    Object.defineProperty(this, "fullName", {
-      get: function () {
-        return this.firstName + " " + this.lastName;
-      },
-      enumerable: true,
-    });
-  }
-
-  function Student(firstName, lastName, age) {
-    Person.call(this, firstName, lastName, age);
-    this._enrolledCourses = [];
-    this.enroll = function (courseId) {
-      this._enrolledCourses.push(courseId);
+  let greeting = (function () {
+    let message = "Hello";
+    let getMessage = function () {
+      return message;
     };
-
-    this.getCourses = function () {
-      return (
-        this.fullName +
-        "'s enrolled course are: " +
-        this._enrolledCourses.join(", ")
-      );
+    return {
+      getMessage: getMessage,
     };
-  }
+  })();
 
-  Student.prototype = Object.create(Person.prototype);
-  Student.prototype.constructor = Student;
+  display("hello");
+  display(greeting.getMessage());
 
-  let jim = new Student("Jim", "Cooper", 29);
+  greeting = () => {
+    //Consumer
+    return "Hello world";
+  };
+  display(greeting());
+  let greet = (val) => {
+    return "Hello " + val;
+  };
+  display(greet("world in arrow"));
 
-  jim.enroll("CS 205");
-  jim.enroll("MA101");
-  let sofia = new Person("Sofia", "Cooper", 17);
+  let person1 = { name: "John", age: 22 };
+  let person2 = { name: "Mary", age: 26 };
 
-  display(jim);
-  display(sofia);
-
-  display(jim.getCourses());
+  let sayHi = function () {
+    console.log("Hi, " + this.name);
+  };
+  //sayHi.call(person1);
+  //sayHi.call(person2);
 })();
